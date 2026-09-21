@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cadastro - Instituto Esperança</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <h2>Cadastro do apoiador</h2>
+
+        <form id="formulario">
+
+            <!-- DADOS PESSOAIS -->
+
+            <fieldset>
+
+                <legend>Dados pessoais</legend>
+
+                <div class="campo">
+
+                    <label for="nome">Nome:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="email">Email:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="senha">Senha:</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="confirmar_senha">
+                        Confirmar senha:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmar_senha"
+                        name="confirmar_senha"
+                        placeholder="Digite sua senha novamente"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- DADOS DE CONTATO -->
+
+            <fieldset>
+
+                <legend>Dados de contato</legend>
+
+                <div class="campo">
+
+                    <label for="cpf">CPF:</label>
+
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="Digite seu CPF"
+                        maxlength="14"
+                        pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                        title="Digite o CPF no formato 000.000.000-00"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="telefone">Telefone:</label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="Digite seu telefone"
+                        maxlength="15"
+                        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                        title="Digite o telefone no formato (00) 00000-0000"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="cep">CEP:</label>
+
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="Digite o CEP"
+                        maxlength="9"
+                        pattern="[0-9]{5}-[0-9]{3}"
+                        title="Digite o CEP no formato 00000-000"
+                        required
+                    >
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- FORMA DE APOIO -->
+
+            <fieldset>
+
+                <legend>Forma de apoio</legend>
+
+                <div class="campo campo-completo">
+
+                    <label for="tipo_ajuda">
+                        Tipo de ajuda:
+                    </label>
+
+                    <select
+                        id="tipo_ajuda"
+                        name="tipo_ajuda"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione o tipo de ajuda
+                        </option>
+
+                        <option value="financeira">
+                            Financeira
+                        </option>
+
+                        <option value="material">
+                            Material
+                        </option>
+
+                        <option value="voluntariado">
+                            Voluntariado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+
+            <button type="submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
